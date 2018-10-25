@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.select {
+    background: #31a3ff;
+    width: 375px;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    padding: 15px;
+    align-items: center;
+    cursor: default;
+}
+.select .left {
+    display: flex;
+    align-items: center;
+}
+.select .left #current-icon {
+    font-size: 1.5rem;
+}
+.select .left #current-category {
+    margin-left: 30px;
+}
+.select .right {
+
+}
+.select .right #arrow {
+    padding: 2px 5px;
+    font-size: 1.7rem;
+    transition: all 0.4s ease-in-out;
+}
+.select .right #arrow.active {
+    transform: rotate(180deg);
+}
+.select .right #arrow:hover {
+    cursor: pointer;
+}
+
+#options {
+    width: 375px;
+    background: #d6d6d6;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+#options.active {
+    height: 300px;
+}
