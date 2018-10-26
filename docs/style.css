@@ -41,12 +41,14 @@ body {
 }
 .select .left #current-icon {
     font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
 }
 .select .left #current-icon i {
     transform: translate3d(0, 0, 0) !important;
 }
 .select .left #current-category {
     margin-left: 30px;
+    transition: opacity 0.1s ease-in-out;
 }
 .select .right {
 
