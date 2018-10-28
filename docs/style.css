@@ -8,22 +8,31 @@
 }
 body {
     font-size: 18px;
-    color: #333333;
+    color: #444444;
     font-family: 'Open Sans', sans-serif;
-    background: #333333;
+    background: white;
     font-weight: 600;
 }
 
 .container {
-    display: flex;
     width: 100vw;
-    flex-direction: column;
+}
+
+#menu {
+    padding: 30px;
+    max-width: 435px;
+    min-width: 300px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 0px 86px 5px rgba(112, 112, 112, 0.1);
+    -moz-box-shadow: 0px 0px 86px 5px rgba(112, 112, 112, 0.1);
+    box-shadow: 0px 0px 86px 5px rgba(112, 112, 112, 0.1);
 }
 
 .select {
     margin: 0 auto;
     background: white;
-    width: 375px;
+    max-width: 375px;
+    min-width: 300px;
     height: 65px;
     display: flex;
     justify-content: space-between;
@@ -31,10 +40,8 @@ body {
     padding: 15px;
     align-items: center;
     cursor: default;
-    -webkit-box-shadow: 0px 0px 86px 5px rgba(54,54,54,0.2);
-    -moz-box-shadow: 0px 0px 86px 5px rgba(54,54,54,0.2);
-    box-shadow: 0px 0px 86px 5px rgba(54,54,54,0.2);
-    overflow: none;
+    overflow: hidden;
+    border: 5px solid #444444;
 }
 .select .left {
     display: flex;
@@ -45,11 +52,11 @@ body {
     transition: all 0.5s ease-in-out;
 }
 .select .left #current-icon i {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) !important;
 }
 .select .left #current-category {
     margin-left: 30px;
-    transition: opacity 0.1s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 .select .right {
 
@@ -68,16 +75,20 @@ body {
 
 #options {
     margin: 0 auto;
-    width: 375px;
+    max-width: 375px;
+    min-width: 300px;
     background: white;
     height: 0;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     opacity: 0;
+    border: 5px solid transparent
 }
 #options.active {
     height: 200px;
     opacity: 1;
+    border-color: #444444;
+    border-top: none;
 }
 #options .option {
     height: 25%;
@@ -91,8 +102,12 @@ body {
 #options .category {
     transition: all 0.5s ease-in-out;
 }
+#options .option {
+    border-left: 0px solid transparent;
+    transition: all 0.4s ease-in-out;
+}
 #options .option:hover {
-    background: #bdbdbd;
+    background: #f3f3f3;
     cursor: pointer;
 }
 #options .option .change-icon {
@@ -111,4 +126,36 @@ body {
 }
 .item {
     transform: translate3d(0, 0, 0);
+}
+
+#options .option:hover.blue {
+    border-color: #5c9dff;
+}
+#options .option:hover.yellow {
+    border-color: #FFE373;
+}
+#options .option:hover.purple {
+    border-color: #7973FF;
+}
+#options .option:hover.red {
+    border-color: #f55649;
+}
+#options .option:hover.teal {
+    border-color: #80DED0;
+}
+
+#blue {
+    color: #5c9dff;
+}
+#yellow {
+    color: #FFE373;
+}
+#purple {
+    color: #7973FF;
+}
+#red {
+    color: #ff5a4e;
+}
+#teal {
+    color: #80DED0;
 }
