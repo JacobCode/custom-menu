@@ -82,7 +82,7 @@ body {
     margin: 0 auto;
     max-width: 375px;
     min-width: 300px;
-    height: 0;
+    height: 5px;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
     opacity: 0;
@@ -92,7 +92,7 @@ body {
     opacity: 0;
 }
 #options.active {
-    height: 200px;
+    height: 225px;
     opacity: 1;
     border-color: #444444;
 }
@@ -100,7 +100,7 @@ body {
     opacity: 1;
 }
 #options .option {
-    height: 25%;
+    height: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -155,6 +155,9 @@ body {
 #options .option:hover.teal {
     border-color: #ffab3e;
 }
+#options .option:hover.color {
+    border-color: #ffdc3e;
+}
 
 /* icons */
 #blue {
@@ -172,6 +175,9 @@ body {
 #teal {
     color: #ffab3e;
 }
+#color {
+    color: #ffdc3e;
+}
 
 @-webkit-keyframes rotation {
 	from {
@@ -180,4 +186,20 @@ body {
 	to {
 		-webkit-transform: rotate(359deg);
 	}
+}
+
+@media screen and (max-width: 600px) {
+    #menu {
+        margin: 0;
+        padding: 0;
+    }
+    .select {
+        margin: 0 !important;
+        min-width: 100vw;
+    }
+    #options {
+        margin: 0 !important;
+        min-width: 100vw;
+        border-top: none;
+    }
 }
